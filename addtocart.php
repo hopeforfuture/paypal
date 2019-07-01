@@ -32,6 +32,7 @@ if(array_key_exists('id', $getdata))
 	$stmt->close();
 	$stmt = null;
 	
+	/* Insert Into Cart Table */
 	$sql_insert_cart = "INSERT INTO tblcart (unique_id, item_id, item_quantity, item_price, created) VALUES(?,?,?,?,?)";
 	$stmt = $mysqli->prepare($sql_insert_cart);
 	$stmt->bind_param('siiii', $cart_unique_id, $item_id, $item_quantity, $cost, $create_time);
