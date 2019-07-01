@@ -11,7 +11,7 @@ if(empty($getdata))
 }
 if(!array_key_exists('unique_id', $sessdata))
 {
-	/* Create unique ID */
+	/* Create unique ID for user */
 	$_SESSION['unique_id'] = time()."_".rand(10000,10000000);
 }
 if(array_key_exists('id', $getdata))
