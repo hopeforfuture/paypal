@@ -127,6 +127,9 @@ if(array_key_exists('msg', $getdata))
 		{
 		?>
 		<div id="paypal-button"></div>
+		<div>
+			<a href="Javascript:void(0);" id="pay-standard"><img src="images/btn_buynow_LG.gif"></a>
+		</div>
 		<?php } ?>
 	</body>
 </html>
@@ -169,4 +172,12 @@ if(array_key_exists('msg', $getdata))
         });
     }
 }, '#paypal-button');
+
+
+$("document").ready(function(){
+	$("body").on("click", "#pay-standard", function(){
+		window.location.href='paypalform.php';
+	});
+});
+
 </script>

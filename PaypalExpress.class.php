@@ -11,6 +11,10 @@ class PaypalExpress{
     public $paypalURL       = 'https://api.sandbox.paypal.com/v1/';
     public $paypalClientID  = 'AX1TUH6mLq76QcVgTXzRZnasvKT8POA-m5lRMlWIdqi7LAfZ0SxtzMJt0nclTPPpOhqaS6gqJoBI3lHF';
     private $paypalSecret   = 'EAlsXFIWFU5JFgc9VAcE9yqnW3SUJ-NFqn9LP5oMhuyHlXAsQeTf6Ht38fnE9FyYuOIubhwEL-oT-NsL';
+	//public $paypalClientID  = 'AQv9Va8xU1g91hQHr1pQ-qUSDVSehLhUT3D8xZTpTNYyM9dqkbO8Hg1vGcfTLDP83HRliUpxdBbMlDFC';
+    //private $paypalSecret   = 'EFQ7Tb48PtjEUymk4PbEZiIvGC_FDrD-aQgJ-xfx2_g1PdVC9V1M1kdtawxuKYcpUINQkPY123d_81ud';
+	//public $paypalClientID  = 'AaxCa5kGVyvCevSG7xdUpzOniFbpdm6z1bYyh5QfWiANFhocnqWBnAKEVdS9YTweKN7fle616J7XWEDA';
+    //private $paypalSecret   = 'EE5_XnkP3K92i3FvNHI42_Slt2XIj-ZbLmjVIy8iKwyXOfg_huc-uVeZ8UEY_xscV9vx2TZO4VNG-K0A';
     
     public function validate($paymentID, $paymentToken, $payerID, $productID=''){
         $ch = curl_init();

@@ -2,3 +2,9 @@ AX1TUH6mLq76QcVgTXzRZnasvKT8POA-m5lRMlWIdqi7LAfZ0SxtzMJt0nclTPPpOhqaS6gqJoBI3lHF
 EAlsXFIWFU5JFgc9VAcE9yqnW3SUJ-NFqn9LP5oMhuyHlXAsQeTf6Ht38fnE9FyYuOIubhwEL-oT-NsL->API Secret
 997455.00USD- Buyer Balance Paypal
 102758.88 USD- Merchant A/C balance
+
+----------------------------------------------------------------------------------------------
+
+Business A/c- manojit.smartwork@gmail.com
+Client ID:- AQv9Va8xU1g91hQHr1pQ-qUSDVSehLhUT3D8xZTpTNYyM9dqkbO8Hg1vGcfTLDP83HRliUpxdBbMlDFC
+Secret-:- EFQ7Tb48PtjEUymk4PbEZiIvGC_FDrD-aQgJ-xfx2_g1PdVC9V1M1kdtawxuKYcpUINQkPY123d_81ud
