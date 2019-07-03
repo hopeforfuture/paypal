@@ -18,5 +18,5 @@
         window.location="index.php"; 
     } 
     //document.write("You will be redirected to a new page in 10 seconds"); 
-    setTimeout('Redirect()', 10000); 
+    setTimeout('Redirect()', 5000); 
 </script>
