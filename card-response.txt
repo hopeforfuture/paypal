@@ -1,0 +1,52 @@
+Array
+(
+    [TIMESTAMP] => 2019-07-09T08:59:49Z
+    [CORRELATIONID] => 3af52fe32dd2f
+    [ACK] => Success
+    [VERSION] => 85.0
+    [BUILD] => 53072421
+    [AMT] => 130.00
+    [CURRENCYCODE] => USD
+    [AVSCODE] => Y
+    [CVV2MATCH] => M
+    [TRANSACTIONID] => 8HM53343SU0085231
+)
+Array
+(
+    [TIMESTAMP] => 2019-07-09T09:01:35Z
+    [CORRELATIONID] => cc69930c89172
+    [ACK] => Success
+    [VERSION] => 85.0
+    [BUILD] => 53072421
+    [AMT] => 130.00
+    [CURRENCYCODE] => USD
+    [AVSCODE] => Y
+    [CVV2MATCH] => M
+    [TRANSACTIONID] => 67448242LL021504A
+)
+Array
+(
+    [TIMESTAMP] => 2019-07-09T09:31:43Z
+    [CORRELATIONID] => 50f921de55c8c
+    [ACK] => Success
+    [VERSION] => 85.0
+    [BUILD] => 53072421
+    [AMT] => 130.00
+    [CURRENCYCODE] => USD
+    [AVSCODE] => Y
+    [CVV2MATCH] => M
+    [TRANSACTIONID] => 0381227305106721W
+)
+Array
+(
+    [TIMESTAMP] => 2019-07-09T09:34:13Z
+    [CORRELATIONID] => 9142660e3f320
+    [ACK] => Success
+    [VERSION] => 85.0
+    [BUILD] => 53072421
+    [AMT] => 130.00
+    [CURRENCYCODE] => USD
+    [AVSCODE] => Y
+    [CVV2MATCH] => M
+    [TRANSACTIONID] => 8MF94440L64536453
+)

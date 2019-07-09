@@ -61,7 +61,9 @@ if(array_key_exists('msg', $getdata))
 <html>
 	<head>
 		<title>List of Items in Cart</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<script language="Javascript" src="js/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<h3 align="center">List of Items in Cart</h3>
@@ -128,9 +130,12 @@ if(array_key_exists('msg', $getdata))
 		?>
 		<div id="paypal-button"></div>
 		<div>
-			<a href="Javascript:void(0);" id="pay-standard"><img src="images/btn_buynow_LG.gif"></a>
+			<a href="Javascript:void(0);" id="pay-standard"><img src="images/btn_buynow_LG.gif"></a>&nbsp;
+			<button class="btn btn-info" type="Card Payment" id="cardpayment">Card Payment</button>
 		</div>
-		<?php } ?>
+		<?php
+			include_once 'paypal-pro-modal.php';
+		} ?>
 	</body>
 </html>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
@@ -177,6 +182,10 @@ if(array_key_exists('msg', $getdata))
 $("document").ready(function(){
 	$("body").on("click", "#pay-standard", function(){
 		window.location.href='paypalform.php';
+	});
+	
+	$("body").on("click", "#cardpayment", function(){
+		$("#myModal").modal();
 	});
 });
 
