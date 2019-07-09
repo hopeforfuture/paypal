@@ -69,6 +69,7 @@
 <script>
 function Redirect() 
 {  
+   $('#myModal').modal('toggle'); 
    window.location="index.php"; 
 } 
 $(document).ready(function(){
@@ -97,7 +98,7 @@ $(document).ready(function(){
 					//var res = JSON.parse(response);
                     if(res.status == 1){
                         $('#paymentSection').html('<p class="status-msg success">The transaction was successful. Order ID: <span>'+res.orderID+'</span></p>');
-						$('#myModal').modal('toggle'); 
+						
 						setTimeout('Redirect()', 5000); 
                     }else{
                         $("#cardSubmitBtn").prop('disabled', false);
