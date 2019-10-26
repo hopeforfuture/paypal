@@ -52,3 +52,10 @@ Card Number: 5158597754920134
 Expiration Date: 01/2024
 
 CVV: 728
+
+---------------------------------------------------------------------------------------------------
+ 
+ Stripe api details
+ 
+ Email: mnbl87@gmail.com
+ password: admin123!
