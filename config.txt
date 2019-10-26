@@ -17,7 +17,7 @@ password:- admin123!
 
 -------------developer.paypal.com credentials--------------------------
 Master A/C Login:- mnbl87@gmail.com
-Password:- admin123!
+Password:- test123!
 
 Master A/C Login:- asha.kumari.smartwork@gmail.com
 Password:- admin123!

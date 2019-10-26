@@ -22,3 +22,7 @@ define('PAYPAL_CURRENCY', 'USD');
 
 // Change not required 
 define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cgi-bin/webscr":"https://www.paypal.com/cgi-bin/webscr");
+
+// Stripe API configuration  
+define('STRIPE_API_KEY', 'sk_test_tgBGiijmsl5rd3LS6KzPK6t600KmG8B8L2'); 
+define('STRIPE_PUBLISHABLE_KEY', 'pk_test_MPK14b0he1g8Pp1CZMN263t600Pb3gh0W7'); 

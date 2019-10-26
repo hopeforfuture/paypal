@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 include_once 'dbconfig.php';
+include_once 'payconfig.php';
 include_once 'PaypalExpress.class.php';
 $paypal = new PaypalExpress;
 $dir = "uploads/";
@@ -132,13 +133,17 @@ if(array_key_exists('msg', $getdata))
 		<div>
 			<a href="Javascript:void(0);" id="pay-standard"><img src="images/btn_buynow_LG.gif"></a>&nbsp;
 			<button class="btn btn-info" type="Card Payment" id="cardpayment">Card Payment</button>
+			<button class="btn btn-info" type="button" id="stripepayment">Stripe</button>
 		</div>
 		<?php
 			include_once 'paypal-pro-modal.php';
 		} ?>
 	</body>
 </html>
+
+
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
 <script language="javascript">
 	paypal.Button.render({
     // Configure environment
@@ -187,6 +192,10 @@ $("document").ready(function(){
 	$("body").on("click", "#cardpayment", function(){
 		$("#myModal").modal();
 	});
+    
+    $("body").on("click", "#stripepayment", function(){
+        window.location.href = 'stripe_payment.php';
+    });
 });
 
 </script>
