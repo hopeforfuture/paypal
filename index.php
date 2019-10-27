@@ -38,8 +38,9 @@ if(array_key_exists('flash', $sessdata))
 		<script language="Javascript" src="js/jquery.js"></script>
 	</head>
 	<body>
-		<h3>List of Products</h3>
+		
 		<div class="heading"><a href="view_cart.php">[VIEW CART]</a></div>
+        <h3>List of Products</h3>
 		<table class="content-table">
             <?php
             if(!empty($flash_msg))
