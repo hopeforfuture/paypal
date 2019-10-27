@@ -34,20 +34,22 @@ if(array_key_exists('flash', $sessdata))
 <html>
 	<head>
 		<title>Paypal Integration in PHP</title>
+        <link rel="stylesheet" href="css/custom.css">
 		<script language="Javascript" src="js/jquery.js"></script>
 	</head>
 	<body>
-		<h3 align="center">List of Products</h3>
-		<div align="center"><a href="view_cart.php">[VIEW CART]</a></div>
-		<table border="1" align="center">
+		<h3>List of Products</h3>
+		<div class="heading"><a href="view_cart.php">[VIEW CART]</a></div>
+		<table class="content-table">
+            <?php
+            if(!empty($flash_msg))
+            {
+            ?>
+                <h3 class="msg"><?php echo $flash_msg; ?></h3>
+            <?php
+            }
+            ?>
 			<thead>
-				<?php
-				if(!empty($flash_msg))
-				{
-					echo "<tr><td colspan='6' align='center' style='color:red;font-weight:bold;'>".$flash_msg."</td></tr>";
-					
-				}
-				?>
 				<tr>
 					<th>SI NO</th>
 					<th>Product Name</th>
