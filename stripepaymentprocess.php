@@ -84,29 +84,26 @@ if(!empty($_POST['stripeToken']))
             $stmtorder->close();
             $stmtorder = null;
             
+            //Create payment info
+            $sql_payment_insert = "INSERT INTO tblpayments (txn_id, order_id, payment_gross, currency_code, payer_id, payment_status) VALUES(?,?,?,?,?,?)";
+            $stmtpayment = $mysqli->prepare($sql_payment_insert);
+            $stmtpayment->bind_param('sidsss', $txn_id, $order_id, $payment, $currency, $payer_id, $payment_status);
+
+            $txn_id = $charge->id;
+            $order_id = $order_create_id;
+            $payment = ($charge->amount)/100;
+            $currency = strtoupper($charge->currency);
+            $payer_id = $charge->customer;
+            $payment_status = $charge->status;
+            $stmtpayment->execute();
+
+            $stmtpayment->close();
+            $stmtpayment = null;
         } catch(Exception $ex) {
-            echo $mysqli->error;
+            
             echo $ex->getMessage();
         }
         
-        
-        //Create payment info
-        $sql_payment_insert = "INSERT INTO tblpayments (txn_id, order_id, payment_gross, currency_code, payer_id, payment_status) VALUES(?,?,?,?,?,?)";
-        $stmtpayment = $mysqli->prepare($sql_payment_insert);
-        $stmtpayment->bind_param('sidsss', $txn_id, $order_id, $payment, $currency, $payer_id, $payment_status);
-        
-        $txn_id = $charge->id;
-        $order_id = $order_create_id;
-        $payment = ($charge->amount)/100;
-        $currency = strtoupper($charge->currency);
-        $payer_id = $charge->customer;
-        $payment_status = $charge->status;
-        
-        $stmtpayment->execute();
-        
-        
-        $stmtpayment->close();
-        $stmtpayment = null;
         $mysqli->close();		
 		
         unset($_SESSION['unique_id']);
@@ -144,6 +141,10 @@ if(!empty($_POST['stripeToken']))
                 <p>Payment status:<?php echo $payment_status; ?></p>
             </div>
         <?php
+        }
+        else
+        {
+            echo "<h3>Tranaction failed.Please try again.</h3>";
         }
         ?>
     </body>
